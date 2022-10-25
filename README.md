@@ -5,6 +5,7 @@ Any kind or size of the contribution is valuable. No matter if you're good at da
 | Name | Description | Skills |
 |---|---|---|
 | [PrimiHub](https://github.com/primihub/primihub) | Hyper Multi-Party computing platform | C++ for the core </br> Python for the SDK |
+| [HEhub](https://github.com/primihub/hehub) | A library for homomorphic encryption and its applications | C++ |
 | [PrimiHub Platform](https://github.com/primihub/primihub-platform) | Hyper Multi-Party computing Application | Spring Boot as the backend </br> Vue as the frontend </br> Maven as the build tool |
 | [Documentation](https://github.com/primihub/primihub-docs) | The official document of PrimiHub | Powered by [Docusaurus 2](https://docusaurus.io/) |
 
