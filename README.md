@@ -1,6 +1,6 @@
 Welcome to the PrimiHub community!
 
-Any kind or size of the contribution is valuable. No matter if you're good at data privacy protect technology or not. You could always find a grow path. We have many varieties of open-source projects. Please feel free to look at the following table:
+We value any kind or size of the contribution. If you find a typo in the documentation, or have made improvements, do not hesitate to submit a GitHub pull request. We have many open-source projects. Please feel free to look at the following table.
 
 | Name | Description | Skills |
 |---|---|---|
@@ -10,35 +10,71 @@ Any kind or size of the contribution is valuable. No matter if you're good at da
 | [Documentation](https://github.com/primihub/primihub-docs) | The official document of PrimiHub | Powered by [Docusaurus 2](https://docusaurus.io/) |
 
 ## Development workflow
+
 Below is a common contribution guide in the PrimiHub community:
 
-We suggest using [the GitHub official CLI](https://cli.github.com/) during this process, but any git tool is ok as well.
+### Step 1 Fork the project repository
 
-### Step 1, Fork the target repository
-Click the `Fork` button to create a fork of a project to your GitHub account. Such as click [here](https://github.com/primihub/community/fork).
+Click the `Fork` button near the top of the project page. Such as click [here](https://github.com/primihub/primihub/fork) to fork the [PrimiHub repo](<https://github.com/primihub/primihub>). For more details, see [this](https://docs.github.com/en/get-started/quickstart/fork-a-repo) guide.
 
-### Step 2, Clone
-Clone your own repository to your development environment. Normally, the repository path looks like this:
+### Step 2 Clone the fork of the repository
 
-```shell
-https://github.com/your-account/community
-```
-
-### Step 3, Create and Development in a new branch
-Please always create a new branch when you're trying to make any changes. For example:
+For example, clone the fork of the PrimiHub repo by running the following command
 
 ```shell
-git checkout -b feat-xxx
+git clone git@github.com:your-account/primihub.git # add --depth 1 if your connection is slow
+cd primihub
 ```
 
-### Step 4, Push your work
-Everyone should push the changes to their own repository even if they have the commit permission of the target repository.
+### Step 3 Add remote to the main repository
 
-Please provide a readable PR title and appropriate description. You could follow the PR template if there's one.
+This saves a reference which you can keep your repository synchronized with the latest changes. For example, run the following command to add the `upstream` remote to the [PrimiHub repo](<https://github.com/primihub/primihub>).
 
-### Step 5, Check the build status
-Usually, an open-source community will take advantage of the automation workflow to do test or validation work. Please take a look at the build status, and make sure all the statuses are successful.
+```shell
+git remote add upstream git@github.com:primihub/primihub.git
+```
+
+To check the remote is configured correctly, run `git remote -v`
+
+### Step 4 Build the project from source (if necessary)
+
+Follow [this](https://docs.primihub.com/docs/advance-usage/start/build/) doc to build the Primihub project from source. Then [install](https://docs.primihub.com/docs/advance-usage/python-sdk/install/) the Python dependencies. Skip this step if necessary, e.g., document contribution.
+
+### Step 5 Develop the feature and push your work
+
+First, create a feature branch to hold your development changes.
+
+```shell
+git checkout -b my_feature
+```
+
+Then, start making changes. When you’re done editing, add changed files using `git add` and then `git commit` to record your changes.
+
+```shell
+git add modified_files​
+git commit -m "description of the changes"
+```
+
+It is often helpful to keep your local feature branch synchronized with the latest changes of the main repository.
+
+```shell
+git fetch upstream/develop​
+git merge upstream/develop
+```
+
+You might need to solve the conflicts, refer to [this](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line) doc if needed.
+
+Finally, push the changes to your GitHub account.
+
+```shell
+git push -u origin my_feature
+```
+
+### Step 6 Open a new pull request
+
+Follow [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) instructions to create a pull request from your fork. Please provide a readable PR title and detailed descriptions.
 
 ## Join Us
+
 * [Twitter](https://twitter.com/OpenPrimi)
 * [Gitter](https://gitter.im/primihub/community)
