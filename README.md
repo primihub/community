@@ -38,7 +38,7 @@ To check the remote is configured correctly, run `git remote -v`
 
 ### Step 4 Build the project from source (if necessary)
 
-Follow [this](https://docs.primihub.com/docs/advance-usage/start/build/) doc to build the Primihub project from source. Then [install](https://docs.primihub.com/docs/advance-usage/python-sdk/install/) the Python dependencies. Skip this step if necessary, e.g., document contribution.
+Follow [this](https://docs.primihub.com/docs/advance-usage/start/build/) doc to build the Primihub project from source. Then [install](https://docs.primihub.com/docs/advance-usage/python-sdk/install/) the Python dependencies. Skip this step if unnecessary, e.g., document contribution.
 
 ### Step 5 Develop the feature and push your work
 
