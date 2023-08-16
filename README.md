@@ -58,7 +58,7 @@ git commit -m "description of the changes"
 It is often helpful to keep your local feature branch synchronized with the latest changes of the main repository.
 
 ```shell
-git fetch upstream/develop​
+git fetch upstream develop​
 git merge upstream/develop
 ```
 
